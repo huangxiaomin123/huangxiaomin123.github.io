@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黄晓敏 学习主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        body {
+            background-color: #f0f7ee;
+            padding: 20px 16px;
+        }
+        /* 个人信息卡片 */
+        .info-card {
+            background: #fffdf8;
+            border-radius: 22px;
+            padding: 30px 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px #e2ece0;
+            text-align: center;
+        }
+        .name-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:12px;
+            margin-bottom:16px;
+        }
+        .avatar-icon{
+            width:60px;
+            height:60px;
+            background:#738c70;
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:white;
+            font-size:28px;
+        }
+        .name-text{
+            font-size:42px;
+            color:#4b5c49;
+            font-weight:600;
+        }
+        .desc-text{
+            color:#6b7c69;
+            font-size:15px;
+            line-height:1.6;
+        }
+        /* 数据三栏 */
+        .data-row{
+            display:flex;
+            justify-content:space-around;
+            gap:12px;
+            margin:36px 0;
+        }
+        .data-item{
+            background:#fffdf8;
+            flex:1;
+            text-align:center;
+            padding:24px 8px;
+            border-radius:18px;
+            box-shadow:0 2px 6px #e2ece0;
+        }
+        .data-num{
+            font-size:40px;
+            color:#4a5b48;
+            font-weight:500;
+        }
+        .data-txt{
+            font-size:13px;
+            color:#728370;
+            margin-top:6px;
+        }
+        /* 课程标题 */
+        .course-title{
+            display:flex;
+            align-items:center;
+            gap:8px;
+            font-size:24px;
+            color:#4b5c49;
+            margin:24px 0 18px;
+        }
+        /* 课程卡片 */
+        .course-card{
+            background:#fffdf8;
+            border-radius:20px;
+            padding:22px 18px;
+            box-shadow:0 2px 7px #e2ece0;
+        }
+        .course-num{
+            font-size:52px;
+            color:#839c80;
+        }
+        .course-name{
+            font-size:26px;
+            color:#4a5b48;
+            margin:8px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 个人信息 -->
+    <div class="info-card">
+        <div class="name-wrap">
+            <div class="avatar-icon">敏</div>
+            <div class="name-text">黄晓敏</div>
+        </div>
+        <div class="desc-text">
+            广东科学技术职业学院 · 大数据专业<br>
+            专注Python数据分析学习
+        </div>
+    </div>
+
+    <!-- 数据统计 -->
+    <div class="data-row">
+        <div class="data-item">
+            <div class="data-num">6</div>
+            <div class="data-txt">学习课程</div>
+        </div>
+        <div class="data-item">
+            <div class="data-num">20+</div>
+            <div class="data-txt">练习题目</div>
+        </div>
+        <div class="data-item">
+            <div class="data-num">∞</div>
+            <div class="data-txt">学习潜力</div>
+        </div>
+    </div>
+
+    <!-- 课程区 -->
+    <div class="course-title">
+        <span>➤</span>核心课程 · 点击卡片开始学习
+    </div>
+    <div class="course-card">
+        <div class="course-num">2</div>
+        <div class="course-name">Python基础</div>
+        <div style="margin-top:10px;color:#778975">零基础入门编程，夯实代码基本功</div>
+    </div>
+</body>
+</html>
