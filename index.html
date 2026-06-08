@@ -22,18 +22,18 @@
             padding: 30px 20px;
             margin-bottom: 30px;
             box-shadow: 0 2px 8px #e2ece0;
-            text-align: center;
+            文本对齐：居中;
         }
         .name-wrap {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap:12px;
-            margin-bottom:16px;
+            显示：伸缩;
+            对齐项目：居中;
+            文本对齐：居中;
+            间隙:12像素;
+            下边距:16像素;
         }
-        .avatar-icon{
-            width:60px;
-            height:60px;
+        .头像图标{
+            宽度:60像素;
+            高度:60像素;
             background:#738c70;
             border-radius:50%;
             display:flex;
@@ -45,22 +45,22 @@
         .name-text{
             font-size:42px;
             color:#4b5c49;
-            font-weight:600;
+            字体粗细:600;
         }
-        .desc-text{
-            color:#6b7c69;
-            font-size:15px;
-            line-height:1.6;
+        .描述文本{
+            颜色:#6b7c69;
+            字体大小:15像素;
+            行高: 1.6;
         }
         /* 数据三栏 */
-        .data-row{
-            display:flex;
-            justify-content:space-around;
-            gap:12px;
-            margin:36px 0;
+        .数据行{
+            显示：弹性;
+            文本对齐:均匀分布;
+            间隙:12像素;
+            边距:36像素 0;
         }
-        .data-item{
-            background:#fffdf8;
+        .数据项{
+            背景:#fffdf8;
             flex:1;
             text-align:center;
             padding:24px 8px;
@@ -96,7 +96,7 @@
         .course-num{
             font-size:52px;
             color:#839c80;
-        }
+}
         .course-name{
             font-size:26px;
             color:#4a5b48;
@@ -144,3 +144,71 @@
     </div>
 </body>
 </html>
+<!-- ========== 新增：学习内容专区 ========== -->
+<section style="margin: 40px 0; padding: 20px; border: 1px solid #eee; border-radius: 8px;">
+  <h2 style="color: #222; border-left: 4px solid #2196F3; padding-left: 12px;">📚 学习专区</h2>
+  <p style="color: #666; margin: 10px 0 20px;">日常学习笔记、教程、练习资料汇总</p>
+
+  <!-- 学习分类卡片 -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px;">
+    <!-- 分类1：前端学习 -->
+    <a href="#front-end" style="display: block; padding: 16px; background: #f7f9fc; border-radius: 6px; text-decoration: none; color: #333;">
+      <h3>前端开发</h3>
+      <p style="font-size: 14px; color: #666;">HTML / CSS / JavaScript / Vue</p>
+    </a>
+    <!-- 分类2：编程基础 -->
+    <a href="#code-base" style="display: block; padding: 16px; background: #f7f9fc; border-radius: 6px; text-decoration: none; color: #333;">
+      <h3>编程基础</h3>
+      <p style="font-size: 14px; color: #666;">语法、算法、练习题</p>
+    </a>
+    <!-- 分类3：学习笔记 -->
+    <a href="#notes" style="display: block; padding: 16px; background: #f7f9fc; border-radius: 6px; text-decoration: none; color: #333;">
+      <h3>个人笔记</h3>
+      <p style="font-size: 14px; color: #666;">知识点总结、干货整理</p>
+    </a>
+    <!-- 分类4：资源合集 -->
+    <a href="#resource" style="display: block; padding: 16px; background: #f7f9fc; border-radius: 6px; text-decoration: none; color: #333;">
+      <h3>工具&资源</h3>
+      <p style="font-size: 14px; color: #666;">学习网站、软件、文档</p>
+    </a>
+  </div>
+
+  <!-- 对应锚点内容 -->
+  <div id="front-end" style="margin-top: 30px; padding-top: 20px; border-top: 1px dashed #eee;">
+    <h3>🔹 前端开发学习内容</h3>
+    <ul style="line-height: 1.8; padding-left: 20px;">
+      <li>HTML 标签与语义化</li>
+      <li>CSS 布局、样式与动画</li>
+      <li>JavaScript 基础语法与DOM操作</li>
+      <li>框架学习：Vue / React 入门</li>
+    </ul>
+  </div>
+
+  <div id="code-base" style="margin-top: 30px; padding-top: 20px; border-top: 1px dashed #eee;">
+    <h3>🔹 编程基础</h3>
+    <ul style="line-height: 1.8; padding-left: 20px;">
+      <li>基础语法入门</li>
+      <li>数据结构与简单算法</li>
+      <li>课后练习题与实战案例</li>
+    </ul>
+  </div>
+
+  <div id="notes" style="margin-top: 30px; padding-top: 20px; border-top: 1px dashed #eee;">
+    <h3>🔹 个人学习笔记</h3>
+    <ul style="line-height: 1.8; padding-left: 20px;">
+      <li>每日知识点总结</li>
+      <li>易错点整理</li>
+      <li>学习心得与经验</li>
+    </ul>
+  </div>
+
+  <div id="resource" style="margin-top: 30px; padding-top: 20px; border-top: 1px dashed #eee;">
+    <h3>🔹 学习工具 & 资源</h3>
+    <ul style="line-height: 1.8; padding-left: 20px;">
+      <li>在线学习网站推荐</li>
+      <li>开发工具、插件使用教程</li>
+      <li>免费文档、电子书汇总</li>
+    </ul>
+  </div>
+</section>
+<!-- ========== 学习专区结束 ========== -->
