@@ -17,14 +17,13 @@
       max-width: 1100px;
       margin: 0 auto;
       padding: 20px;
-      /* 清新蓝色渐变背景 */
       background: linear-gradient(120deg, #e6f0ff, #d0e4ff);
       color: #333;
       line-height: 1.7;
       min-height: 100vh;
     }
 
-    /* 顶部个人信息封面区 */
+    /* 顶部个人封面区 */
     .profile-header {
       background: linear-gradient(135deg, #1976D2, #2196F3);
       color: #fff;
@@ -210,6 +209,54 @@
       background: #e6f0ff;
       color: #0d47a1;
     }
+
+    /* 视频区域样式 */
+    .video-box {
+      margin-top: 16px;
+      padding: 16px;
+      background: #f5f9ff;
+      border-radius: 8px;
+      border: 1px solid #d0e4ff;
+    }
+
+    .video-item {
+      margin: 12px 0;
+      padding: 10px;
+      background: #fff;
+      border-radius: 6px;
+    }
+
+    .video-item p {
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .video-link {
+      display: inline-block;
+      padding: 6px 14px;
+      background: #2196F3;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .video-link:hover {
+      background: #1976D2;
+    }
+
+    /* 视频容器（本地/在线视频自适应） */
+    .video-container {
+      width: 100%;
+      height: auto;
+      margin: 10px 0;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 6px;
+      outline: none;
+    }
   </style>
 </head>
 
@@ -223,10 +270,10 @@
 
   <header>
     <h1>📊 数据分析技术 学习专区</h1>
-    <p class="desc">课程知识点、实操案例、交互式选择题练习</p>
+    <p class="desc">课程知识点、实操案例、选择题、学习视频</p>
   </header>
 
-  <!-- 导航卡片 -->
+  <!-- 导航卡片（新增：学习视频） -->
   <div class="nav-grid">
     <div class="nav-item active" data-module="base">
       <h4>数据分析基础</h4>
@@ -243,6 +290,10 @@
     <div class="nav-item" data-module="case">
       <h4>综合实战案例</h4>
       <p>项目练习、数据分析报告</p>
+    </div>
+    <div class="nav-item" data-module="video">
+      <h4>学习视频</h4>
+      <p>课程教学视频</p>
     </div>
   </div>
 
@@ -394,8 +445,8 @@
         <h4>课后选择题（综合应用）</h4>
         <div class="question" data-answer="D">
           <div class="q-title">1. 数据分析报告的核心目的不包括？</div>
-          <div class="option">A. 展示数据结果</div>
-          <div class="option">B. 解读数据规律</div>
+          <div class="option">A. 展示结果</div>
+          <div class="option">B. 解读规律</div>
           <div class="option">C. 给出优化建议</div>
           <div class="option">D. 单纯罗列原始数据</div>
         </div>
@@ -431,6 +482,51 @@
           <li>报告逻辑清晰、排版整洁</li>
           <li>可附上工具操作截图</li>
         </ul>
+      </div>
+    </div>
+
+    <!-- 新增：学习视频板块 -->
+    <div class="module" id="video">
+      <h3>5. 课程学习视频</h3>
+      <p>数据分析技术配套教学视频，可在线观看学习</p>
+
+      <div class="video-box">
+        <!-- 视频1 -->
+        <div class="video-item">
+          <p>📺 视频一：数据分析基础入门讲解</p>
+          <!-- 方式1：本地视频（把视频文件和html放在同一目录，修改src名称即可） -->
+          <div class="video-container">
+            <video controls preload="metadata">
+              <source src="video1.mp4" type="video/mp4">
+              您的浏览器不支持视频播放，请点击下方链接观看。
+            </video>
+          </div>
+          <!-- 方式2：外部视频链接（替换成你的视频网址） -->
+          <a href="https://xxx.com" target="_blank" class="video-link">点击跳转观看</a>
+        </div>
+
+        <!-- 视频2 -->
+        <div class="video-item">
+          <p>📺 视频二：Excel 数据实操教程</p>
+          <div class="video-container">
+            <video controls preload="metadata">
+              <source src="video2.mp4" type="video/mp4">
+              您的浏览器不支持视频播放，请点击下方链接观看。
+            </video>
+          </div>
+          <a href="https://xxx.com" target="_blank" class="video-link">点击跳转观看</a>
+        </div>
+
+        <!-- 视频3 -->
+        <div class="video-item">
+          <p>📺 视频三：Python 数据分析实战</p>
+          <div class="video-container">
+            <video controls preload="metadata">
+              <source src="video3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <a href="https://xxx.com" target="_blank" class="video-link">点击跳转观看</a>
+        </div>
       </div>
     </div>
   </div>
