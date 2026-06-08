@@ -1,11 +1,11 @@
 
-<html lang="zh-CN">
-<head>
+ 
+<头>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>黄晓敏 学习主页</title>
-    <style>
-        * {
+    <样式>
+        *  {
             边距：0;
             
             盒模型：边框盒;
@@ -54,7 +54,7 @@
 .6;
         }
         /* 数据三栏 */
-        .数据行  {
+        .数据行   {
             显示：弹性;
             文本对齐:均匀分布;
             间隙:12像素;
@@ -145,67 +145,173 @@ course-card{
     </div>
 </body>
 </html>
-<!-- 数据分析学习专区 -->
-<section style="margin: 40px 0; padding: 24px; border: 1px solid #e8e8e8; border-radius: 10px; background: #fefefe;">
-  <h2 style="color: #1976D2; border-left: 5px solid #1976D2; padding-left: 14px; margin-bottom: 12px;">📊 数据分析技术 学习专区</h2>
-  <p style="color: #666; margin-bottom: 24px;">课程知识点、实操案例、练习任务、学习笔记汇总</p>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数据分析技术 | 学习专区</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "微软雅黑", sans-serif;
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      line-height: 1.8;
+      color: #333;
+      background-color: #f9fafb;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    h1 {
+      color: #1976D2;
+      margin-bottom: 8px;
+      font-size: 28px;
+    }
+    .desc {
+      color: #666;
+      font-size: 16px;
+    }
+    .card-nav {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+    .card-nav a {
+      display: block;
+      padding: 18px;
+      background: #f0f7ff;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #222;
+      transition: background .2s;
+    }
+    .card-nav a:hover {
+      background: #e0edff;
+    }
+    .card-nav a.active {
+      background: #1976D2;
+      color: #fff;
+    }
+    .content-box {
+      background: #fff;
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .module {
+      display: none; /* 默认全部隐藏 */
+    }
+    .module h3 {
+      margin-bottom: 12px;
+      font-size: 20px;
+      border-left: 4px solid #1976D2;
+      padding-left: 12px;
+    }
+    ul {
+      padding-left: 24px;
+      color: #444;
+    }
+    li {
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📊 数据分析技术 学习专区</h1>
+    <p class="desc">课程知识点、实操案例、练习任务、学习笔记汇总</p>
+  </header>
 
-  <!-- 分类导航卡片 -->
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 30px;">
-    <a href="#base" style="display:block; padding:18px; background:#f0f7ff; border-radius:8px; text-decoration:none; color:#222;">
-      <h4 style="margin:0 0 6px 0;">数据分析基础</h4>
+  <!-- 导航卡片 -->
+  <div class="card-nav">
+    <a href="#" class="active" data-target="base">
+      <h4>数据分析基础</h4>
       <p style="font-size:14px; color:#555; margin:0;">概念、流程、指标体系</p>
     </a>
-    <a href="#tool" style="display:block; padding:18px; background:#f0f7ff; border-radius:8px; text-decoration:none; color:#222;">
-      <h4 style="margin:0 0 6px 0;">常用工具实操</h4>
+    <a href="#" data-target="tool">
+      <h4>常用工具实操</h4>
       <p style="font-size:14px; color:#555; margin:0;">Excel / SQL / Python</p>
     </a>
-    <a href="#visual" style="display:block; padding:18px; background:#f0f7ff; border-radius:8px; text-decoration:none; color:#222;">
-      <h4 style="margin:0 0 6px 0;">数据可视化</h4>
+    <a href="#" data-target="visual">
+      <h4>数据可视化</h4>
       <p style="font-size:14px; color:#555; margin:0;">图表制作、图表解读</p>
     </a>
-    <a href="#case" style="display:block; padding:18px; background:#f0f7ff; border-radius:8px; text-decoration:none; color:#222;">
-      <h4 style="margin:0 0 6px 0;">综合实战案例</h4>
+    <a href="#" data-target="case">
+      <h4>综合实战案例</h4>
       <p style="font-size:14px; color:#555; margin:0;">项目练习、数据分析报告</p>
     </a>
   </div>
 
-  <!-- 对应知识点内容 -->
-  <div id="base" style="margin:25px 0; padding-top:20px; border-top:1px dashed #ddd;">
-    <h3 style="color:#222;">1. 数据分析基础</h3>
-    <ul style="line-height:1.9; padding-left:22px; color:#333;">
-      <li>数据分析基本概念、应用场景与职业认知</li>
-      <li>完整数据分析流程：数据采集 → 清洗 → 分析 → 可视化 → 报告</li>
-      <li>基础统计知识：均值、中位数、众数、方差、概率基础</li>
-      <li>业务指标搭建、数据维度拆分</li>
-    </ul>
+  <!-- 内容区：四个模块，默认只显示第一个 -->
+  <div class="content-box">
+    <div id="base" class="module" style="display:block;">
+      <h3>1. 数据分析基础</h3>
+      <ul>
+        <li>数据分析基本概念、应用场景与职业认知</li>
+        <li>完整数据分析流程：数据采集 → 清洗 → 分析 → 可视化 → 报告</li>
+        <li>基础统计知识：均值、中位数、众数、方差、概率基础</li>
+        <li>业务指标搭建、数据维度拆分</li>
+      </ul>
+    </div>
+
+    <div id="tool" class="module">
+      <h3>2. 主流分析工具</h3>
+      <ul>
+        <li>Excel：函数、数据透视表、数据清洗、条件分析</li>
+        <li>SQL：数据库查询、多表联查、筛选、分组、聚合统计</li>
+        <li>Python 数据分析：Pandas 数据处理、Numpy 数值计算</li>
+      </ul>
+    </div>
+
+    <div id="visual" class="module">
+      <h3>3. 数据可视化</h3>
+      <ul>
+        <li>常用图表选择：柱状图、折线图、饼图、散点图、直方图</li>
+        <li>图表美化、配色规范、信息降噪</li>
+        <li>基于工具制作可视化图表、数据解读技巧</li>
+      </ul>
+    </div>
+
+    <div id="case" class="module">
+      <h3>4. 综合实战案例</h3>
+      <ul>
+        <li>学生成绩数据分析</li>
+        <li>电商用户行为与销售数据分析</li>
+        <li>撰写标准数据分析报告，输出结论与建议</li>
+      </ul>
+    </div>
   </div>
 
-  <div id="tool" style="margin:25px 0; padding-top:20px; border-top:1px dashed #ddd;">
-    <h3 style="color:#222;">2. 主流分析工具</h3>
-    <ul style="line-height:1.9; padding-left:22px; color:#333;">
-      <li>Excel：函数、数据透视表、数据清洗、条件分析</li>
-      <li>SQL：数据库查询、多表联查、筛选、分组、聚合统计</li>
-      <li>Python 数据分析：Pandas 数据处理、Numpy 数值计算</li>
-    </ul>
-  </div>
+  <!-- 简单JS：点击切换显示/隐藏 -->
+  <script>
+    const cards = document.querySelectorAll('.card-nav a');
+    const modules = document.querySelectorAll('.module');
 
-  <div id="visual" style="margin:25px 0; padding-top:20px; border-top:1px dashed #ddd;">
-    <h3 style="color:#222;">3. 数据可视化</h3>
-    <ul style="line-height:1.9; padding-left:22px; color:#333;">
-      <li>常用图表选择：柱状图、折线图、饼图、散点图、直方图</li>
-      <li>图表美化、配色规范、信息降噪</li>
-      <li>基于工具制作可视化图表、数据解读技巧</li>
-    </ul>
-  </div>
-
-  <div id="case" style="margin:25px 0; padding-top:20px; border-top:1px dashed #ddd;">
-    <h3 style="color:#222;">4. 综合实战案例</h3>
-    <ul style="line-height:1.9; padding-left:22px; color:#333;">
-      <li>学生成绩数据分析</li>
-      <li>电商用户行为与销售数据分析</li>
-      <li>撰写标准数据分析报告，输出结论与建议</li>
-    </ul>
-  </div>
-</section>
-<a href="/data-analysis.html" style="padding: 9px 18px; background:#1976D2; color:#fff; text-decoration:none; border-radius:6px;">进入数据分析学习页面</a>
+    cards.forEach(card => {
+      card.addEventListener('click', e => {
+        e.preventDefault();
+        // 所有卡片取消 active
+        cards.forEach(c => c.classList.remove('active'));
+        // 所有模块隐藏
+        modules.forEach(m => m.style.display = 'none');
+        // 当前卡片 active
+        card.classList.add('active');
+        // 显示对应模块
+        const target = card.getAttribute('data-target');
+        document.getElementById(target).style.display = 'block';
+      });
+    });
+  </script>
+</body>
+</html>
