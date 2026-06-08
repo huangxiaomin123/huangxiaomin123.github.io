@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -34,26 +34,26 @@
         .头像图标{
             宽度:60像素;
             高度:60像素;
-            background:#738c70;
-            border-radius:50%;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            color:white;
-            font-size:28px;
+            背景:#738c70;
+            边框半径:50%;
+            显示：弹性;
+            对齐项目:居中;
+            文本对齐:居中;
+            颜色:白色;
+            字体大小:28像素;
         }
-        .name-text{
-            font-size:42px;
-            color:#4b5c49;
+        .名字文本{
+            字体大小:42像素;
+            颜色:#4b5c49;
             字体粗细:600;
         }
-        .描述文本{
+        .描述文本+
             颜色:#6b7c69;
             字体大小:15像素;
-            行高: 1.6;
+            行高：1.6;
         }
         /* 数据三栏 */
-        .数据行{
+        .数据行 {
             显示：弹性;
             文本对齐:均匀分布;
             间隙:12像素;
@@ -86,8 +86,8 @@
             color:#4b5c49;
             margin:24px 0 18px;
         }
-        /* 课程卡片 */
-        .course-card{
+
+course-card{
             background:#fffdf8;
             border-radius:20px;
             padding:22px 18px;
@@ -144,71 +144,66 @@
     </div>
 </body>
 </html>
-<!-- ========== 新增：学习内容专区 ========== -->
-<section style="margin: 40px 0; padding: 20px; border: 1px solid #eee; border-radius: 8px;">
-  <h2 style="color: #222; border-left: 4px solid #2196F3; padding-left: 12px;">📚 学习专区</h2>
-  <p style="color: #666; margin: 10px 0 20px;">日常学习笔记、教程、练习资料汇总</p>
+<!-- 数据分析学习专区 -->
+<section style="margin: 40px 0; padding: 24px; border: 1px solid #e8e8e8; border-radius: 10px; background: #fefefe;">
+  <h2 style="color: #1976D2; border-left: 5px solid #1976D2; padding-left: 14px; margin-bottom: 12px;">📊 数据分析技术 学习专区</h2>
+  <p style="color: #666; margin-bottom: 24px;">课程知识点、实操案例、练习任务、学习笔记汇总</p>
 
-  <!-- 学习分类卡片 -->
-  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px;">
-    <!-- 分类1：前端学习 -->
-    <a href="#front-end" style="display: block; padding: 16px; background: #f7f9fc; border-radius: 6px; text-decoration: none; color: #333;">
-      <h3>前端开发</h3>
-      <p style="font-size: 14px; color: #666;">HTML / CSS / JavaScript / Vue</p>
+  <!-- 分类导航卡片 -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 30px;">
+    <a href="#base" style="display:block; padding:18px; background:#f0f7ff; border-radius:8px; text-decoration:none; color:#222;">
+      <h4 style="margin:0 0 6px 0;">数据分析基础</h4>
+      <p style="font-size:14px; color:#555; margin:0;">概念、流程、指标体系</p>
     </a>
-    <!-- 分类2：编程基础 -->
-    <a href="#code-base" style="display: block; padding: 16px; background: #f7f9fc; border-radius: 6px; text-decoration: none; color: #333;">
-      <h3>编程基础</h3>
-      <p style="font-size: 14px; color: #666;">语法、算法、练习题</p>
+    <a href="#tool" style="display:block; padding:18px; background:#f0f7ff; border-radius:8px; text-decoration:none; color:#222;">
+      <h4 style="margin:0 0 6px 0;">常用工具实操</h4>
+      <p style="font-size:14px; color:#555; margin:0;">Excel / SQL / Python</p>
     </a>
-    <!-- 分类3：学习笔记 -->
-    <a href="#notes" style="display: block; padding: 16px; background: #f7f9fc; border-radius: 6px; text-decoration: none; color: #333;">
-      <h3>个人笔记</h3>
-      <p style="font-size: 14px; color: #666;">知识点总结、干货整理</p>
+    <a href="#visual" style="display:block; padding:18px; background:#f0f7ff; border-radius:8px; text-decoration:none; color:#222;">
+      <h4 style="margin:0 0 6px 0;">数据可视化</h4>
+      <p style="font-size:14px; color:#555; margin:0;">图表制作、图表解读</p>
     </a>
-    <!-- 分类4：资源合集 -->
-    <a href="#resource" style="display: block; padding: 16px; background: #f7f9fc; border-radius: 6px; text-decoration: none; color: #333;">
-      <h3>工具&资源</h3>
-      <p style="font-size: 14px; color: #666;">学习网站、软件、文档</p>
+    <a href="#case" style="display:block; padding:18px; background:#f0f7ff; border-radius:8px; text-decoration:none; color:#222;">
+      <h4 style="margin:0 0 6px 0;">综合实战案例</h4>
+      <p style="font-size:14px; color:#555; margin:0;">项目练习、数据分析报告</p>
     </a>
   </div>
 
-  <!-- 对应锚点内容 -->
-  <div id="front-end" style="margin-top: 30px; padding-top: 20px; border-top: 1px dashed #eee;">
-    <h3>🔹 前端开发学习内容</h3>
-    <ul style="line-height: 1.8; padding-left: 20px;">
-      <li>HTML 标签与语义化</li>
-      <li>CSS 布局、样式与动画</li>
-      <li>JavaScript 基础语法与DOM操作</li>
-      <li>框架学习：Vue / React 入门</li>
+  <!-- 对应知识点内容 -->
+  <div id="base" style="margin:25px 0; padding-top:20px; border-top:1px dashed #ddd;">
+    <h3 style="color:#222;">1. 数据分析基础</h3>
+    <ul style="line-height:1.9; padding-left:22px; color:#333;">
+      <li>数据分析基本概念、应用场景与职业认知</li>
+      <li>完整数据分析流程：数据采集 → 清洗 → 分析 → 可视化 → 报告</li>
+      <li>基础统计知识：均值、中位数、众数、方差、概率基础</li>
+      <li>业务指标搭建、数据维度拆分</li>
     </ul>
   </div>
 
-  <div id="code-base" style="margin-top: 30px; padding-top: 20px; border-top: 1px dashed #eee;">
-    <h3>🔹 编程基础</h3>
-    <ul style="line-height: 1.8; padding-left: 20px;">
-      <li>基础语法入门</li>
-      <li>数据结构与简单算法</li>
-      <li>课后练习题与实战案例</li>
+  <div id="tool" style="margin:25px 0; padding-top:20px; border-top:1px dashed #ddd;">
+    <h3 style="color:#222;">2. 主流分析工具</h3>
+    <ul style="line-height:1.9; padding-left:22px; color:#333;">
+      <li>Excel：函数、数据透视表、数据清洗、条件分析</li>
+      <li>SQL：数据库查询、多表联查、筛选、分组、聚合统计</li>
+      <li>Python 数据分析：Pandas 数据处理、Numpy 数值计算</li>
     </ul>
   </div>
 
-  <div id="notes" style="margin-top: 30px; padding-top: 20px; border-top: 1px dashed #eee;">
-    <h3>🔹 个人学习笔记</h3>
-    <ul style="line-height: 1.8; padding-left: 20px;">
-      <li>每日知识点总结</li>
-      <li>易错点整理</li>
-      <li>学习心得与经验</li>
+  <div id="visual" style="margin:25px 0; padding-top:20px; border-top:1px dashed #ddd;">
+    <h3 style="color:#222;">3. 数据可视化</h3>
+    <ul style="line-height:1.9; padding-left:22px; color:#333;">
+      <li>常用图表选择：柱状图、折线图、饼图、散点图、直方图</li>
+      <li>图表美化、配色规范、信息降噪</li>
+      <li>基于工具制作可视化图表、数据解读技巧</li>
     </ul>
   </div>
 
-  <div id="resource" style="margin-top: 30px; padding-top: 20px; border-top: 1px dashed #eee;">
-    <h3>🔹 学习工具 & 资源</h3>
-    <ul style="line-height: 1.8; padding-left: 20px;">
-      <li>在线学习网站推荐</li>
-      <li>开发工具、插件使用教程</li>
-      <li>免费文档、电子书汇总</li>
+  <div id="case" style="margin:25px 0; padding-top:20px; border-top:1px dashed #ddd;">
+    <h3 style="color:#222;">4. 综合实战案例</h3>
+    <ul style="line-height:1.9; padding-left:22px; color:#333;">
+      <li>学生成绩数据分析</li>
+      <li>电商用户行为与销售数据分析</li>
+      <li>撰写标准数据分析报告，输出结论与建议</li>
     </ul>
   </div>
 </section>
-<!-- ========== 学习专区结束 ========== -->
