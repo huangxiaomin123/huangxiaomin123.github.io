@@ -1,494 +1,255 @@
-
- 
-<头>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>黄晓敏 学习主页</title>
-    <样式>
-        *  {
-            边距：0;
-            
-            盒模型：边框盒;
-            字体家族：系统字体，-apple-system，无衬线字体；
-        }
-        身体 {
-            背景颜色: #f0f7ee;
-             
-        }
-        /* 个人信息卡片 */
-        .信息卡片 {
-            背景: #fffdf8;
-            边框半径：22像素;
-             
-            下边距：30像素;
-            box-shadow：0 2px 8px#e2ece0;
-            文本对齐：居中;
-        }
-        .name-wrap {
-            显示：伸缩;
-            对齐项目：居中;
-            文本对齐：居中;
-            间隙:12像素;
-            下边距:16像素;
-        }
-        .头像图标{
-            宽度:60像素;
-            高度:60像素;
-            背景:#738c70;
-            边框半径:50%;
-            显示：弹性;
-            对齐项目:居中;
-            文本对齐:居中;
-            颜色:白色;
-            字体大小:28像素;
-        }
-        .名字文本{
-            字体大小:42像素;
-            颜色:#4b5c49;
-            字体粗细:600;
-        }
-        .描述文本+
-            颜色:#6b7c69;
-            字体大小:15像素;
-            行高：1
-.6;
-        }
-        /* 数据三栏 */
-        .数据行   {
-            显示：弹性;
-            文本对齐:均匀分布;
-            间隙:12像素;
-            边距:36像素 0;
-        }
-        .数据项{
-            背景:#fffdf8;
-        * ;
-            text-align:center;
-            padding:24px 8px;
-            border-radius:18px;
-            box-shadow:0 2px 6px #e2ece0;
-        }
-        .data-num{
-            font-size:40px;
-            color:#4a5b48;
-            font-weight:500;
-        }
-        .data-txt{
-            font-size:13px;
-            color:#728370;
-            margin-top:6px;
-        }
-        /* 课程标题 */
-        .course-title{
-            display:flex;
-            align-items:center;
-            gap:8px;
-            font-size:24px;
-            color:#4b5c49;
-            margin:24px 0 18px;
-        }
-
-course-card{
-            background:#fffdf8;
-            border-radius:20px;
-            padding:22px 18px;
-            box-shadow:0 2px 7px #e2ece0;
-        }
-        .course-num{
-            font-size:52px;
-            color:#839c80;
-}
-        .course-name{
-            font-size:26px;
-            color:#4a5b48;
-            margin:8px 0;
-        }
-    </style>
-</head>
-<body>
-    <!-- 个人信息 -->
-    <div class="info-card">
-        <div class="name-wrap">
-            <div class="avatar-icon">敏</div>
-            <div class="name-text">黄晓敏</div>
-        </div>
-        <div class="desc-text">
-            广东科学技术职业学院 · 大数据专业<br>
-            专注Python数据分析学习
-        </div>
-    </div>
-
-    <!-- 数据统计 -->
-    <div class="data-row">
-        <div class="data-item">
-            <div class="data-num">6</div>
-            <div class="data-txt">学习课程</div>
-        </div>
-        <div class="data-item">
-            <div class="data-num">20+</div>
-            <div class="data-txt">练习题目</div>
-        </div>
-        <div class="data-item">
-            <div class="data-num">∞</div>
-            <div class="data-txt">学习潜力</div>
-        </div>
-    </div>
-
-    <!-- 课程区 -->
-    <div class="course-title">
-        <span>➤</span>核心课程 · 点击卡片开始学习
-    </div>
-    <div class="course-card">
-        <div class="course-num">2</div>
-        <div class="course-name">Python基础</div>
-        <div style="margin-top:10px;color:#778975">零基础入门编程，夯实代码基本功</div>
-    </div>
-</body>
-</html>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>数据分析技术 | 学习专区</title>
+  <title>黄晓敏 - 数据分析学习主页</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
+    /* 全局蓝色渐变背景 */
     body {
-      font-family: "微软雅黑", sans-serif;
-      max-width: 1024px;
+      font-family: "Microsoft Yahei", sans-serif;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 30px 20px;
-      line-height: 1.8;
+      padding: 20px;
+      /* 清新蓝色渐变背景 */
+      background: linear-gradient(120deg, #e6f0ff, #d0e4ff);
       color: #333;
-      background-color: #f9fafb;
+      line-height: 1.7;
+      min-height: 100vh;
     }
-    header {
+
+    /* 顶部个人信息封面区 */
+    .profile-header {
+      background: linear-gradient(135deg, #1976D2, #2196F3);
+      color: #fff;
       text-align: center;
-      margin-bottom: 40px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #e5e7eb;
-    }
-    h1 {
-      color: #1976D2;
-      margin-bottom: 8px;
-      font-size: 28px;
-    }
-    .desc {
-      color: #666;
-      font-size: 16px;
-    }
-    .card-nav {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
+      padding: 35px 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(25, 118, 210, 0.25);
       margin-bottom: 30px;
     }
-    .card-nav a {
-      display: block;
-      padding: 18px;
-      background: #f0f7ff;
-      border-radius: 8px;
-      text-decoration: none;
-      color: #222;
-      transition: background .2s;
-    }
-    .card-nav a:hover {
-      background: #e0edff;
-    }
-    .card-nav a.active {
-      background: #1976D2;
-      color: #fff;
-    }
-    .content-box {
-      background: #fff;
-      padding: 24px;
-      border-radius: 8px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
-    .module {
-      display: none; /* 默认全部隐藏 */
-    }
-    .module h3 {
-      margin-bottom: 12px;
-      font-size: 20px;
-      border-left: 4px solid #1976D2;
-      padding-left: 12px;
-    }
-    ul {
-      padding-left: 24px;
-      color: #444;
-    }
-    li {
-      margin: 8px 0;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>📊 数据分析技术 学习专区</h1>
-    <p class="desc">课程知识点、实操案例、练习任务、学习笔记汇总</p>
-  </header>
 
-  <!-- 导航卡片 -->
-  <div class="card-nav">
-    <a href="#" class="active" data-target="base">
-      <h4>数据分析基础</h4>
-      <p style="font-size:14px; color:#555; margin:0;">概念、流程、指标体系</p>
-    </a>
-    <a href="#" data-target="tool">
-      <h4>常用工具实操</h4>
-      <p style="font-size:14px; color:#555; margin:0;">Excel / SQL / Python</p>
-    </a>
-    <a href="#" data-target="visual">
-      <h4>数据可视化</h4>
-      <p style="font-size:14px; color:#555; margin:0;">图表制作、图表解读</p>
-    </a>
-    <a href="#" data-target="case">
-      <h4>综合实战案例</h4>
-      <p style="font-size:14px; color:#555; margin:0;">项目练习、数据分析报告</p>
-    </a>
-  </div>
-
-  <!-- 内容区：四个模块，默认只显示第一个 -->
-  <div class="content-box">
-    <div id="base" class="module" style="display:block;">
-      <h3>1. 数据分析基础</h3>
-      <ul>
-        <li>数据分析基本概念、应用场景与职业认知</li>
-        <li>完整数据分析流程：数据采集 → 清洗 → 分析 → 可视化 → 报告</li>
-        <li>基础统计知识：均值、中位数、众数、方差、概率基础</li>
-        <li>业务指标搭建、数据维度拆分</li>
-      </ul>
-    </div>
-
-    <div id="tool" class="module">
-      <h3>2. 主流分析工具</h3>
-      <ul>
-        <li>Excel：函数、数据透视表、数据清洗、条件分析</li>
-        <li>SQL：数据库查询、多表联查、筛选、分组、聚合统计</li>
-        <li>Python 数据分析：Pandas 数据处理、Numpy 数值计算</li>
-      </ul>
-    </div>
-
-    <div id="visual" class="module">
-      <h3>3. 数据可视化</h3>
-      <ul>
-        <li>常用图表选择：柱状图、折线图、饼图、散点图、直方图</li>
-        <li>图表美化、配色规范、信息降噪</li>
-        <li>基于工具制作可视化图表、数据解读技巧</li>
-      </ul>
-    </div>
-
-    <div id="case" class="module">
-      <h3>4. 综合实战案例</h3>
-      <ul>
-        <li>学生成绩数据分析</li>
-        <li>电商用户行为与销售数据分析</li>
-        <li>撰写标准数据分析报告，输出结论与建议</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- 简单JS：点击切换显示/隐藏 -->
-  <script>
-    const cards = document.querySelectorAll('.card-nav a');
-    const modules = document.querySelectorAll('.module');
-
-    cards.forEach(card => {
-      card.addEventListener('click', e => {
-        e.preventDefault();
-        // 所有卡片取消 active
-        cards.forEach(c => c.classList.remove('active'));
-        // 所有模块隐藏
-        modules.forEach(m => m.style.display = 'none');
-        // 当前卡片 active
-        card.classList.add('active');
-        // 显示对应模块
-        const target = card.getAttribute('data-target');
-        document.getElementById(target).style.display = 'block';
-      });
-    });
-  </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>数据分析技术 | 学习专区</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    .profile-header h2 {
+      font-size: 32px;
+      margin-bottom: 8px;
+      letter-spacing: 4px;
     }
-    body {
-      font-family: "微软雅黑", sans-serif;
-      max-width: 1024px;
-      margin: 0 auto;
-      padding: 30px 20px;
-      line-height: 1.8;
-      color: #333;
-      background-color: #f9fafb;
+
+    .profile-header p {
+      font-size: 16px;
+      opacity: 0.95;
+      margin: 4px 0;
     }
+
     header {
       text-align: center;
-      margin-bottom: 40px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #e5e7eb;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #b3d4ff;
     }
+
     h1 {
-      color: #1976D2;
-      margin-bottom: 8px;
-      font-size: 28px;
+      color: #0d47a1;
+      font-size: 26px;
+      margin-bottom: 6px;
     }
+
     .desc {
-      color: #666;
-      font-size: 16px;
+      color: #22579e;
+      font-size: 15px;
     }
-    .card-nav {
+
+    /* 导航卡片 */
+    .nav-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin-bottom: 30px;
+      gap: 14px;
+      margin-bottom: 24px;
     }
-    .card-nav a {
-      display: block;
-      padding: 18px;
-      background: #f0f7ff;
+
+    .nav-item {
+      background: #ffffff;
+      padding: 16px;
       border-radius: 8px;
-      text-decoration: none;
-      color: #222;
-      transition: background .2s;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.25s;
+      border: 2px solid transparent;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     }
-    .card-nav a:hover {
-      background: #e0edff;
-    }
-    .card-nav a.active {
+
+    .nav-item.active {
       background: #1976D2;
       color: #fff;
+      border-color: #1565C0;
     }
-    .content-box {
-      background: #fff;
-      padding: 24px;
-      border-radius: 8px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+
+    .nav-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(25, 118, 210, 0.2);
     }
+
+    .nav-item h4 {
+      margin-bottom: 4px;
+      font-size: 16px;
+    }
+
+    .nav-item p {
+      font-size: 13px;
+      color: #555;
+    }
+
+    .nav-item.active p {
+      color: #fff;
+    }
+
+    /* 内容主体 */
+    .content {
+      background: #ffffff;
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
     .module {
       display: none;
     }
+
+    .module.active {
+      display: block;
+    }
+
     .module h3 {
+      font-size: 19px;
+      color: #0d47a1;
       margin-bottom: 12px;
-      font-size: 20px;
-      border-left: 4px solid #1976D2;
-      padding-left: 12px;
+      padding-left: 10px;
+      border-left: 4px solid #2196F3;
     }
-    h4 {
-      margin: 16px 0 8px;
-      font-size: 17px;
-      color: #2c3e50;
+
+    ul {
+      padding-left: 22px;
+      margin-bottom: 16px;
     }
-    ul, ol {
-      padding-left: 24px;
-      color: #444;
-    }
+
     li {
-      margin: 8px 0;
+      margin: 6px 0;
     }
-    pre {
-      background: #f4f6f8;
-      padding: 14px;
-      border-radius: 4px;
-      overflow-x: auto;
-      margin: 10px 0;
-      font-family: Consolas, monospace;
-      font-size: 14px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 12px 0;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px 12px;
-      text-align: center;
-    }
-    th {
-      background: #eef5ff;
-    }
+
+    /* 习题区域 */
     .exercise {
-      background: #f8fbff;
-      padding: 16px;
-      border-radius: 6px;
-      margin: 10px 0;
+      background: #f5f9ff;
+      padding: 18px;
+      border-radius: 8px;
+      margin-top: 16px;
+      border: 1px solid #d0e4ff;
     }
-    /* 选择题样式 */
-    .q-item {
-      margin: 15px 0;
-      padding-bottom: 12px;
-      border-bottom: 1px dashed #eee;
+
+    .exercise h4 {
+      margin-bottom: 12px;
+      font-size: 16px;
+      color: #0d47a1;
     }
+
+    .question {
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed #cce0ff;
+    }
+
     .q-title {
-      font-weight: 500;
+      font-weight: bold;
       margin-bottom: 8px;
+      font-size: 15px;
     }
+
     .option {
       display: block;
       padding: 6px 10px;
       margin: 4px 0;
-      border-radius: 4px;
+      border-radius: 5px;
       cursor: pointer;
-      transition: background 0.2s;
+      transition: 0.2s;
     }
+
     .option:hover {
-      background: #f0f7ff;
+      background: #e6f0ff;
     }
+
     .option.right {
       background: #e8f5e9;
       color: #2e7d32;
     }
+
     .option.wrong {
       background: #ffebee;
       color: #c62828;
     }
+
+    /* 表格样式 */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 14px;
+    }
+
+    th, td {
+      border: 1px solid #cce0ff;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background: #e6f0ff;
+      color: #0d47a1;
+    }
   </style>
 </head>
+
 <body>
+  <!-- 顶部个人封面（姓名+身份） -->
+  <div class="profile-header">
+    <h2>黄晓敏</h2>
+    <p>广东科学技术职业学院 · 大数据专业</p>
+    <p>专注 Python 与数据分析技术学习</p>
+  </div>
+
   <header>
     <h1>📊 数据分析技术 学习专区</h1>
-    <p class="desc">课程知识点、实操案例、选择题练习、学习笔记汇总</p>
+    <p class="desc">课程知识点、实操案例、交互式选择题练习</p>
   </header>
 
   <!-- 导航卡片 -->
-  <div class="card-nav">
-    <a href="#" class="active" data-target="base">
+  <div class="nav-grid">
+    <div class="nav-item active" data-module="base">
       <h4>数据分析基础</h4>
-      <p style="font-size:14px; color:#555; margin:0;">概念、流程、指标体系</p>
-    </a>
-    <a href="#" data-target="tool">
+      <p>概念、流程、指标体系</p>
+    </div>
+    <div class="nav-item" data-module="tool">
       <h4>常用工具实操</h4>
-      <p style="font-size:14px; color:#555; margin:0;">Excel / SQL / Python</p>
-    </a>
-    <a href="#" data-target="visual">
+      <p>Excel / SQL / Python</p>
+    </div>
+    <div class="nav-item" data-module="visual">
       <h4>数据可视化</h4>
-      <p style="font-size:14px; color:#555; margin:0;">图表制作、图表解读</p>
-    </a>
-    <a href="#" data-target="case">
+      <p>图表制作、图表解读</p>
+    </div>
+    <div class="nav-item" data-module="case">
       <h4>综合实战案例</h4>
-      <p style="font-size:14px; color:#555; margin:0;">项目练习、数据分析报告</p>
-    </a>
+      <p>项目练习、数据分析报告</p>
+    </div>
   </div>
 
-  <!-- 内容区域 -->
-  <div class="content-box">
-    <!-- 1. 数据分析基础 + 选择题 -->
-    <div id="base" class="module" style="display:block;">
+  <!-- 内容区 -->
+  <div class="content">
+    <!-- 数据分析基础 -->
+    <div class="module active" id="base">
       <h3>1. 数据分析基础</h3>
       <ul>
         <li>数据分析基本概念、应用场景与职业认知</li>
@@ -499,32 +260,32 @@ course-card{
 
       <div class="exercise">
         <h4>课后选择题（理论基础）</h4>
-        <div class="q-item" data-answer="B">
+        <div class="question" data-answer="B">
           <div class="q-title">1. 数据分析的标准流程顺序是？</div>
-          <label class="option">A. 分析→采集→清洗→可视化</label>
-          <label class="option">B. 采集→清洗→分析→可视化</label>
-          <label class="option">C. 清洗→采集→可视化→分析</label>
-          <label class="option">D. 可视化→分析→清洗→采集</label>
+          <div class="option">A. 分析→采集→清洗→可视化</div>
+          <div class="option">B. 采集→清洗→分析→可视化</div>
+          <div class="option">C. 清洗→采集→可视化→分析</div>
+          <div class="option">D. 可视化→分析→清洗→采集</div>
         </div>
-        <div class="q-item" data-answer="C">
+        <div class="question" data-answer="C">
           <div class="q-title">2. 反映一组数据出现次数最多的数值是？</div>
-          <label class="option">A. 均值</label>
-          <label class="option">B. 中位数</label>
-          <label class="option">C. 众数</label>
-          <label class="option">D. 方差</label>
+          <div class="option">A. 均值</div>
+          <div class="option">B. 中位数</div>
+          <div class="option">C. 众数</div>
+          <div class="option">D. 方差</div>
         </div>
-        <div class="q-item" data-answer="A">
+        <div class="question" data-answer="A">
           <div class="q-title">3. 以下哪项不属于数据清洗工作？</div>
-          <label class="option">A. 制作数据图表</label>
-          <label class="option">B. 删除重复数据</label>
-          <label class="option">C. 补全缺失值</label>
-          <label class="option">D. 修正异常数据</label>
+          <div class="option">A. 制作数据图表</div>
+          <div class="option">B. 删除重复数据</div>
+          <div class="option">C. 补全缺失值</div>
+          <div class="option">D. 修正异常数据</div>
         </div>
       </div>
     </div>
 
-    <!-- 2. 常用工具实操 + 选择题 -->
-    <div id="tool" class="module">
+    <!-- 常用工具实操 -->
+    <div class="module" id="tool">
       <h3>2. 主流分析工具</h3>
       <ul>
         <li>Excel：函数、数据透视表、数据清洗、条件分析</li>
@@ -532,7 +293,6 @@ course-card{
         <li>Python 数据分析：Pandas 数据处理、Numpy 数值计算</li>
       </ul>
 
-      <h4>示例学生成绩表</h4>
       <table>
         <tr>
           <th>姓名</th>
@@ -562,32 +322,32 @@ course-card{
 
       <div class="exercise">
         <h4>课后选择题（工具实操）</h4>
-        <div class="q-item" data-answer="A">
+        <div class="question" data-answer="A">
           <div class="q-title">1. Excel 中计算一组数据总和的函数是？</div>
-          <label class="option">A. SUM</label>
-          <label class="option">B. AVERAGE</label>
-          <label class="option">C. COUNT</label>
-          <label class="option">D. MAX</label>
+          <div class="option">A. SUM</div>
+          <div class="option">B. AVERAGE</div>
+          <div class="option">C. COUNT</div>
+          <div class="option">D. MAX</div>
         </div>
-        <div class="q-item" data-answer="B">
+        <div class="question" data-answer="B">
           <div class="q-title">2. SQL 中用于条件筛选的关键字是？</div>
-          <label class="option">A. SELECT</label>
-          <label class="option">B. WHERE</label>
-          <label class="option">C. FROM</label>
-          <label class="option">D. ORDER BY</label>
+          <div class="option">A. SELECT</div>
+          <div class="option">B. WHERE</div>
+          <div class="option">C. FROM</div>
+          <div class="option">D. ORDER BY</div>
         </div>
-        <div class="q-item" data-answer="D">
+        <div class="question" data-answer="D">
           <div class="q-title">3. Python 中专门用于表格数据处理的库是？</div>
-          <label class="option">A. Matplotlib</label>
-          <label class="option">B. Requests</label>
-          <label class="option">C. Numpy</label>
-          <label class="option">D. Pandas</label>
+          <div class="option">A. Matplotlib</div>
+          <div class="option">B. Requests</div>
+          <div class="option">C. Numpy</div>
+          <div class="option">D. Pandas</div>
         </div>
       </div>
     </div>
 
-    <!-- 3. 数据可视化 + 选择题 -->
-    <div id="visual" class="module">
+    <!-- 数据可视化 -->
+    <div class="module" id="visual">
       <h3>3. 数据可视化</h3>
       <ul>
         <li>常用图表选择：柱状图、折线图、饼图、散点图、直方图</li>
@@ -597,32 +357,32 @@ course-card{
 
       <div class="exercise">
         <h4>课后选择题（数据可视化）</h4>
-        <div class="q-item" data-answer="C">
+        <div class="question" data-answer="C">
           <div class="q-title">1. 用来展示各部分占总体比例的图表是？</div>
-          <label class="option">A. 折线图</label>
-          <label class="option">B. 柱状图</label>
-          <label class="option">C. 饼图</label>
-          <label class="option">D. 散点图</label>
+          <div class="option">A. 折线图</div>
+          <div class="option">B. 柱状图</div>
+          <div class="option">C. 饼图</div>
+          <div class="option">D. 散点图</div>
         </div>
-        <div class="q-item" data-answer="A">
+        <div class="question" data-answer="A">
           <div class="q-title">2. 适合展示数据随时间变化趋势的图表是？</div>
-          <label class="option">A. 折线图</label>
-          <label class="option">B. 饼图</label>
-          <label class="option">C. 柱状图</label>
-          <label class="option">D. 直方图</label>
+          <div class="option">A. 折线图</div>
+          <div class="option">B. 饼图</div>
+          <div class="option">C. 柱状图</div>
+          <div class="option">D. 直方图</div>
         </div>
-        <div class="q-item" data-answer="B">
+        <div class="question" data-answer="B">
           <div class="q-title">3. 对比不同类别数据大小，优先使用？</div>
-          <label class="option">A. 饼图</label>
-          <label class="option">B. 柱状图</label>
-          <label class="option">C. 折线图</label>
-          <label class="option">D. 环形图</label>
+          <div class="option">A. 饼图</div>
+          <div class="option">B. 柱状图</div>
+          <div class="option">C. 折线图</div>
+          <div class="option">D. 环形图</div>
         </div>
       </div>
     </div>
 
-    <!-- 4. 综合实战案例 + 选择题+作业 -->
-    <div id="case" class="module">
+    <!-- 综合实战案例 -->
+    <div class="module" id="case">
       <h3>4. 综合实战案例</h3>
       <ul>
         <li>学生成绩数据分析</li>
@@ -632,23 +392,22 @@ course-card{
 
       <div class="exercise">
         <h4>课后选择题（综合应用）</h4>
-        <div class="q-item" data-answer="D">
+        <div class="question" data-answer="D">
           <div class="q-title">1. 数据分析报告的核心目的不包括？</div>
-          <label class="option">A. 展示数据结果</label>
-          <label class="option">B. 解读数据规律</label>
-          <label class="option">C. 给出优化建议</label>
-          <label class="option">D. 单纯罗列原始数据</label>
+          <div class="option">A. 展示数据结果</div>
+          <div class="option">B. 解读数据规律</div>
+          <div class="option">C. 给出优化建议</div>
+          <div class="option">D. 单纯罗列原始数据</div>
         </div>
-        <div class="q-item" data-answer="C">
+        <div class="question" data-answer="C">
           <div class="q-title">2. 面对大量学生成绩数据，第一步优先做？</div>
-          <label class="option">A. 直接制作图表</label>
-          <label class="option">B. 撰写分析报告</label>
-          <label class="option">C. 数据检查与清洗</label>
-          <label class="option">D. 对外发布结果</label>
+          <div class="option">A. 直接制作图表</div>
+          <div class="option">B. 撰写分析报告</div>
+          <div class="option">C. 数据检查与清洗</div>
+          <div class="option">D. 对外发布结果</div>
         </div>
 
         <h4>综合大作业：学生成绩数据分析报告</h4>
-        <p>作业要求：基于成绩数据表完成全流程分析，并输出完整报告</p>
         <ol>
           <li><strong>一、分析背景与目的</strong>
             <p>针对班级学生三科成绩开展分析，掌握整体学习水平与分数分布。</p>
@@ -676,44 +435,35 @@ course-card{
     </div>
   </div>
 
-  <!-- 板块切换 + 选择题判分逻辑 -->
   <script>
-    // 顶部板块切换
-    const cards = document.querySelectorAll('.card-nav a');
+    // 模块切换
+    const navItems = document.querySelectorAll('.nav-item');
     const modules = document.querySelectorAll('.module');
-    cards.forEach(card => {
-      card.addEventListener('click', e => {
-        e.preventDefault();
-        cards.forEach(c => c.classList.remove('active'));
-        modules.forEach(m => m.style.display = 'none');
-        card.classList.add('active');
-        const target = card.getAttribute('data-target');
-        document.getElementById(target).style.display = 'block';
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const target = item.dataset.module;
+        navItems.forEach(i => i.classList.remove('active'));
+        modules.forEach(m => m.classList.remove('active'));
+        item.classList.add('active');
+        document.getElementById(target).classList.add('active');
       });
     });
 
-    // 选择题点击判对错
-    const questions = document.querySelectorAll('.q-item');
+    // 选择题交互判分
+    const questions = document.querySelectorAll('.question');
     questions.forEach(q => {
-      const answer = q.dataset.answer;
-      const options = q.querySelectorAll('.option');
-      options.forEach(opt => {
+      const ans = q.dataset.answer;
+      const opts = q.querySelectorAll('.option');
+      opts.forEach(opt => {
         opt.addEventListener('click', () => {
-          // 清空上次选择样式
-          options.forEach(o => {
-            o.classList.remove('right','wrong');
-          });
-          // 获取当前选中选项首字母
-          const selectKey = opt.innerText.charAt(0);
-          if(selectKey === answer){
+          opts.forEach(o => o.classList.remove('right', 'wrong'));
+          const key = opt.innerText.charAt(0);
+          if (key === ans) {
             opt.classList.add('right');
-          }else{
+          } else {
             opt.classList.add('wrong');
-            // 自动标红正确答案
-            options.forEach(o=>{
-              if(o.innerText.charAt(0) === answer){
-                o.classList.add('right');
-              }
+            opts.forEach(o => {
+              if (o.innerText.charAt(0) === ans) o.classList.add('right');
             });
           }
         });
